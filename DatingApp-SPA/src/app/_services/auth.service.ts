@@ -22,7 +22,7 @@ constructor(private http: HttpClient) { }
 changeMemberPhoto(photoUrl: string) {
   this.photoUrl.next(photoUrl);
 }
- 
+
 login(model: any) {
   return this.http.post(this.baseUrl + 'login', model).pipe(
       map((response: any) => {
@@ -38,8 +38,8 @@ login(model: any) {
     );
   }
 
-  register(model: any) {
-    return this.http.post(this.baseUrl + 'register', model);
+  register(user: User) {
+    return this.http.post(this.baseUrl + 'register', user);
   }
 
   loggedIn() {
