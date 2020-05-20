@@ -10,3 +10,4 @@ export class PaginatedResult<T> {
     pagination: Pagination;
 }
 
+
