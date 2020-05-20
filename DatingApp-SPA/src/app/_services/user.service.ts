@@ -92,7 +92,7 @@ constructor(private http: HttpClient) { }
             paginatedResult.pagination = JSON.parse(response.headers.get('Pagination'));
           }
 
-          return PaginatedResult;
+          return paginatedResult;
         })
       );
   }
